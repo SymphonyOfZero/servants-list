@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servants</title>
+
+    <!-- Bootstrap CSS/JS -->
+    <link rel="stylesheet" href="./bootstrap-5.3.0/css/bootstrap.min.css">
+    <script src="./bootstrap-5.3.0/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS/JS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="servants.js"></script>
+</head>
+
+<body style="background-color: #06070c; color: white;">
+
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <h1 class="text-primary">Lista de servants</h1>
+            <div class="">
+                <label for="filterByName" class="text-primary">Buscar:</label>
+                <!-- <input id="filterByName" onchange="getServantByName(this.value,document.getElementById('filterByClass').value)" class="form-control bg-dark text-info" type="text"> -->
+                <input id="filterByName" onchange="filterServant()" class="form-control bg-dark text-info" type="text">
+
+            </div>
+        </div>
+
+        <div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-6">
+                <ul>
+                    <li> <span class="btn btn-sm btn-indigo" data-value="true" id="btnEx" onclick="changeValue(this)">+</span> <span class="fw-bold text-indigo">[ Prioridad EX ] </span> = Solo sale 1 vez y no han salido
+                        anteriormente.</li>
+                    <li> <span class="btn btn-sm btn-danger" data-value="true" id="btnA" onclick="changeValue(this)">+</span> <span class="fw-bold text-danger">[ Prioridad A ] </span> = No ha vuelto ha salir.</li>
+                    <li> <span class="btn btn-sm btn-warning" data-value="true" id="btnB" onclick="changeValue(this)">+</span> <span class="fw-bold text-warning">[ Prioridad B ] </span> = Volvera una segunda vez.</li>
+                    <li> <span class="btn btn-sm btn-success" data-value="true" id="btnC" onclick="changeValue(this)">+</span> <span class="fw-bold text-success">[ Prioridad C ] </span> = Volvera dos veces más.</li>
+                    <li> <span class="btn btn-sm btn-info" data-value="true" id="btnD" onclick="changeValue(this)">+</span> <span class="fw-bold text-info">[ Prioridad D ] </span> = Volvera varias veces.</li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <p>
+                    <i>
+                        La prioridad es relativa a la cantida de veces que reaparece el servant desde su fecha de banner hasta la
+                        actualidad en JP. Por eso un mismo servant puede tener prioridad B y prioridad A más adelante. Los prioridad EX
+                        no han tenido ninguna otra reaparición antes ni despues de su fecha.
+                    </i>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-10">
+                <h3>Servants: <span id="resultServant">?</span> de <span id="totalServant">?</span></h3>
+            </div>
+            <div class="col-2">
+                <label for="filterByClass">Filtrar por clase:</label>
+                <select class="form-control bg-dark text-info" onchange="filterServant()" name="filterByClass" id="filterByClass">
+                    <option value="">Todos</option>
+                    <option value="Saber">Saber</option>
+                    <option value="Caster">Caster</option>
+                    <option value="Rider">Rider</option>
+                    <option value="Assasin">Assasin</option>
+                    <option value="Archer">Archer</option>
+                    <option value="Lancer">Lancer</option>
+                    <option value="Berserk">Berserk</option>
+                    <option value="Ruler">Ruler</option>
+                    <option value="Moon Cancer">Moon Cancer</option>
+                    <option value="Avenger">Avenger</option>
+                    <option value="Alter Ego">Alter Ego</option>
+                    <option value="Foreigner">Foreigner</option>
+                    <option value="Pretender">Pretender</option>
+                    <option value="Beast">Beast</option>
+
+                </select>
+            </div>
+        </div>
+        <div id="box" class="row mt-1">
+
+        </div>
+    </div>
+
+
+    <script>
+        getAllServant();
+    </script>
+</body>
+
+</html>

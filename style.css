@@ -1,0 +1,16 @@
+.card-servants {
+    background-color: #18204b
+}
+
+.text-indigo{
+    color: #6610f2;
+}
+
+.btn-indigo{
+    background-color: #6610f2;
+    color: #fff;
+}
+
+.btn-indigo:hover{
+    background-color: #570ecc;
+}
