@@ -217,19 +217,8 @@ const printServants = (filterServant) => {
 
     total += prioEx
 
-    console.log(total)
-
-    // let toto = filterServant.length - prioD - prioC
-
-    // let total = prioD + prioC + prioB + prioA + prioEx - filterServant.length
-
-    // console.log(total)
-    // console.log(`${prioD} - ${prioC} - ${prioB} - ${prioA} - ${prioEx} - ${filterServant.length}`)
-
     document.getElementById('resultServant').innerHTML = total
     document.getElementById('totalServant').innerHTML = totalServant.length
-    // document.getElementById('totalServant').innerHTML = servants.filter(a => ['EX','A'].includes(a.priority)).length
-
 
     filterServant.forEach(x => {
         // Determina el color y el simbolo de la prioridad
@@ -272,7 +261,7 @@ const printServants = (filterServant) => {
 
 
         box.innerHTML +=
-            `<div class="col-12 col-sm-4 col-md-3 col-lg-2 mt-3 d-flex">
+            `<div class="col-6 col-sm-4 col-md-3 col-lg-2 mt-3 d-flex">
                 <div class="card card-servants ">
                     <div class="card-body p-2">
                         <h6 class="card-title text-primary">${x.name}</h6>

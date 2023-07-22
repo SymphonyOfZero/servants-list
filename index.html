@@ -18,21 +18,18 @@
 <body style="background-color: #06070c; color: white;">
 
     <div class="container">
-        <div class="d-flex justify-content-between">
-            <h1 class="text-primary">Lista de servants</h1>
-            <div class="">
+        <div class="row justify-content-between">
+            <div class="col-12 col-md-6">
+                <h1 class="text-primary">Lista de servants</h1>
+            </div>
+            <div class="col-12 col-md-6">
                 <label for="filterByName" class="text-primary">Buscar:</label>
-                <!-- <input id="filterByName" onchange="getServantByName(this.value,document.getElementById('filterByClass').value)" class="form-control bg-dark text-info" type="text"> -->
                 <input id="filterByName" onchange="filterServant()" class="form-control bg-dark text-info" type="text">
-
             </div>
         </div>
 
-        <div>
-        </div>
-
         <div class="row mt-2">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <ul>
                     <li> <span class="btn btn-sm btn-indigo" data-value="true" id="btnEx" onclick="changeValue(this)">+</span> <span class="fw-bold text-indigo">[ Prioridad EX ] </span> = Solo sale 1 vez y no han salido
                         anteriormente.</li>
@@ -42,7 +39,7 @@
                     <li> <span class="btn btn-sm btn-info" data-value="true" id="btnD" onclick="changeValue(this)">+</span> <span class="fw-bold text-info">[ Prioridad D ] </span> = Volvera varias veces.</li>
                 </ul>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <p>
                     <i>
                         La prioridad es relativa a la cantida de veces que reaparece el servant desde su fecha de banner hasta la
@@ -54,10 +51,10 @@
         </div>
 
         <div class="row">
-            <div class="col-10">
+            <div class="col-lg-10 col-12">
                 <h3>Servants: <span id="resultServant">?</span> de <span id="totalServant">?</span></h3>
             </div>
-            <div class="col-2">
+            <div class="col-lg-2 col-12">
                 <label for="filterByClass">Filtrar por clase:</label>
                 <select class="form-control bg-dark text-info" onchange="filterServant()" name="filterByClass" id="filterByClass">
                     <option value="">Todos</option>
@@ -79,11 +76,10 @@
                 </select>
             </div>
         </div>
-        <div id="box" class="row mt-1">
 
+        <div id="box" class="row mt-1">
         </div>
     </div>
-
 
     <script>
         getAllServant();
