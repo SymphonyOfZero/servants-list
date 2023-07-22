@@ -200,7 +200,7 @@ const printServants = (filterServant) => {
     let prioC = filterServant.filter(a => a.priority == 'C').length
     let prioD = filterServant.filter(a => a.priority == 'D').length
     
-    let total
+    let total = 0
     
     if (prioD > 0) {
         total = prioD
