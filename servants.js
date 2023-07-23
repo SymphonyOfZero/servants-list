@@ -3,8 +3,8 @@ const servants = [
     { idImg: 1, class: "Berserk", name: 'Morgan', bannerDate: '2024/4/13', priority: 'B' },
     { idImg: 1, class: "Berserk", name: 'Morgan', bannerDate: '2024/11/3', priority: 'A' },
 
-    { idImg: 2, class: "Assasin", name: 'Koyanskaya of Darkness', bannerDate: '2024/1/1', priority: 'B' },
-    { idImg: 2, class: "Assasin", name: 'Koyanskaya of Darkness', bannerDate: '2025/1/1', priority: 'A' },
+    { idImg: 2, class: "Foreigner", name: 'Koyanskaya of Darkness', bannerDate: '2024/1/1', priority: 'B' },
+    { idImg: 2, class: "Foreigner", name: 'Koyanskaya of Darkness', bannerDate: '2025/1/1', priority: 'A' },
 
     { idImg: 3, class: "Berserk", name: 'Ibuki-Douji (Berserker)', bannerDate: '2024/8/14', priority: 'EX' },
 
@@ -128,6 +128,13 @@ const servants = [
     { idImg: 43, class: "Foreigner", name: 'Jacques de Molay', bannerDate: '2025-04-29', priority: 'A' },
 
     { idImg: 44, class: "Ruler", name: 'Pope Johanna', bannerDate: '2025-02-17', priority: 'EX' },
+
+    { idImg: 45, class: "Foreigner", name: 'Abigail Williams', bannerDate: '2024-11-24', priority: 'EX' },
+
+    { idImg: 46, class: "Foreigner", name: 'Abigail Williams (Summer)', bannerDate: '2024-08-03', priority: 'EX' },
+
+    { idImg: 47, class: "Caster", name: 'Jacques de Molay', bannerDate: '2024-03-12', priority: 'B' },
+    { idImg: 47, class: "Caster", name: 'Jacques de Molay', bannerDate: '2025-03-27', priority: 'A' },
 ]
 
 // Ordena los servants por fecha
