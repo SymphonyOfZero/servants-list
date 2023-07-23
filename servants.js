@@ -133,8 +133,8 @@ const servants = [
 
     { idImg: 46, class: "Foreigner", name: 'Abigail Williams (Summer)', bannerDate: '2024-08-03', priority: 'EX' },
 
-    { idImg: 47, class: "Caster", name: 'Jacques de Molay', bannerDate: '2024-03-12', priority: 'B' },
-    { idImg: 47, class: "Caster", name: 'Jacques de Molay', bannerDate: '2025-03-27', priority: 'A' },
+    { idImg: 47, class: "Caster", name: 'Merlin', bannerDate: '2024-03-12', priority: 'B' },
+    { idImg: 47, class: "Caster", name: 'Merlin', bannerDate: '2025-03-27', priority: 'A' },
 ]
 
 // Ordena los servants por fecha
