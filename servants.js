@@ -259,18 +259,10 @@ const filterServant = () => {
 
     let total = 0
 
-    if (prioD > 0) {
-        total = prioD
-    }
-    if (prioC > 0) {
-        total = prioC
-    }
-    if (prioB > 0) {
-        total = prioB
-    }
-    if (prioA > 0) {
-        total = prioA
-    }
+    total = prioD > 0 ? prioD : total
+    total = prioC > 0 ? prioC : total
+    total = prioB > 0 ? prioB : total
+    total = prioA > 0 ? prioA : total
 
     total += prioEx
 
