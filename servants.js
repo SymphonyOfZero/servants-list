@@ -135,6 +135,18 @@ const servants = [
 
     { idImg: 47, class: "Caster", name: 'Merlin', bannerDate: '2024-03-12', priority: 'B' },
     { idImg: 47, class: "Caster", name: 'Merlin', bannerDate: '2025-03-27', priority: 'A' },
+
+    { idImg: 48, class: "Alter Ego", name: 'Ashiya Douman', bannerDate: '2023-09-22', priority: 'B' },
+    { idImg: 48, class: "Alter Ego", name: 'Ashiya Douman', bannerDate: '2024-08-10', priority: 'A' },
+
+    { idImg: 49, class: "Caster", name: 'Tamamo-no-Mae', bannerDate: '2024-02-09', priority: 'B' },
+    { idImg: 49, class: "Caster", name: 'Tamamo-no-Mae', bannerDate: '2025-02-17', priority: 'A' },
+
+    { idImg: 50, class: "Rider", name: 'Kyokutei Bakin', bannerDate: '2024-06-29', priority: 'B' },
+    { idImg: 50, class: "Rider", name: 'Kyokutei Bakin', bannerDate: '2025-07-07', priority: 'A' },
+    
+    
+    
 ]
 
 // Ordena los servants por fecha
