@@ -25,27 +25,38 @@
             <div class="col-12 col-md-6">
                 <label for="filterByName" class="text-primary">Buscar:</label>
                 <input id="filterByName" onchange="filterServant()" class="form-control bg-dark text-info" type="text">
+
             </div>
         </div>
 
         <div class="row mt-2">
             <div class="col-12 col-md-6">
                 <ul>
-                    <li> <span class="btn btn-sm btn-indigo" data-value="true" id="btnEx" onclick="changeValue(this)">+</span> <span class="fw-bold text-indigo">[ Prioridad EX ] </span> = Solo sale 1 vez y no han salido
+                    <li> <span class="btn btn-sm btn-indigo" data-value="true" id="btnEx"
+                            onclick="changeValue(this)">+</span> <span class="fw-bold text-indigo">[ Prioridad EX ]
+                        </span> = Solo sale 1 vez y no han salido
                         anteriormente.</li>
-                    <li> <span class="btn btn-sm btn-danger" data-value="true" id="btnA" onclick="changeValue(this)">+</span> <span class="fw-bold text-danger">[ Prioridad A ] </span> = No ha vuelto ha salir.</li>
-                    <li> <span class="btn btn-sm btn-warning" data-value="true" id="btnB" onclick="changeValue(this)">+</span> <span class="fw-bold text-warning">[ Prioridad B ] </span> = Volvera una segunda vez.</li>
-                    <li> <span class="btn btn-sm btn-success" data-value="true" id="btnC" onclick="changeValue(this)">+</span> <span class="fw-bold text-success">[ Prioridad C ] </span> = Volvera dos veces más.</li>
-                    <li> <span class="btn btn-sm btn-info" data-value="true" id="btnD" onclick="changeValue(this)">+</span> <span class="fw-bold text-info">[ Prioridad D ] </span> = Volvera varias veces.</li>
+                    <li> <span class="btn btn-sm btn-danger" data-value="true" id="btnA"
+                            onclick="changeValue(this)">+</span> <span class="fw-bold text-danger">[ Prioridad A ]
+                        </span> = No ha vuelto ha salir.</li>
+                    <li> <span class="btn btn-sm btn-warning" data-value="true" id="btnB"
+                            onclick="changeValue(this)">+</span> <span class="fw-bold text-warning">[ Prioridad B ]
+                        </span> = Volvera una segunda vez.</li>
+                    <li> <span class="btn btn-sm btn-success" data-value="true" id="btnC"
+                            onclick="changeValue(this)">+</span> <span class="fw-bold text-success">[ Prioridad C ]
+                        </span> = Volvera dos veces más.</li>
+                    <li> <span class="btn btn-sm btn-info" data-value="true" id="btnD"
+                            onclick="changeValue(this)">+</span> <span class="fw-bold text-info">[ Prioridad D ] </span>
+                        = Volvera varias veces.</li>
                 </ul>
             </div>
             <div class="col-12 col-md-6">
-                <p>
-                    <i>
-                        La prioridad es relativa a la cantida de veces que reaparece el servant desde su fecha de banner hasta la
-                        actualidad en JP. Por eso un mismo servant puede tener prioridad B y prioridad A más adelante. Los prioridad EX
-                        no han tenido ninguna otra reaparición antes ni despues de su fecha.
-                    </i>
+                <p class="fst-italic fs-6 text-secondary">
+                    La prioridad es relativa a la cantida de veces que reaparece el servant desde su fecha de banner
+                    hasta la
+                    actualidad en JP. Por eso un mismo servant puede tener prioridad B y prioridad A más adelante. Los
+                    prioridad EX
+                    no han tenido ninguna otra reaparición antes ni despues de su fecha.
                 </p>
             </div>
         </div>
@@ -56,7 +67,8 @@
             </div>
             <div class="col-lg-2 col-12">
                 <label for="filterByClass">Filtrar por clase:</label>
-                <select class="form-control bg-dark text-info" onchange="filterServant()" name="filterByClass" id="filterByClass">
+                <select class="form-control bg-dark text-info" onchange="filterServant()" name="filterByClass"
+                    id="filterByClass">
                     <option value="">Todos</option>
                     <option value="Saber">Saber</option>
                     <option value="Caster">Caster</option>
