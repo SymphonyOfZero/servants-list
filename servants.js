@@ -150,7 +150,7 @@ const changeValue = (selected) => {
     }
 
     // filterServant()
-    test()
+    filterServant()
 }
 
 // funcion para cargar todos los servants
