@@ -11,7 +11,7 @@
     <script src="./bootstrap-5.3.0/js/bootstrap.min.js"></script>
 
     <!-- Custom CSS/JS -->
-    <link rel="icon" type="image/jpg" href="favicon.ico"/>
+    <link rel="icon" type="image/jpg" href="favicon.ico" />
     <link rel="stylesheet" href="style.css">
     <script src="servantsList.js"></script>
     <script src="scripts.js"></script>
@@ -25,7 +25,7 @@
                 <h1 class="text-primary">Lista de servants</h1>
             </div>
             <div class="col-12 col-md-6">
-                <label for="filterByName" class="text-primary">Buscar:</label>
+                <label for="filterByName" class="">Buscar por nombre:</label>
                 <input id="filterByName" onchange="filterServant()" class="form-control bg-dark text-info" type="text">
 
             </div>
@@ -33,24 +33,35 @@
 
         <div class="row mt-2">
             <div class="col-12 col-md-6">
-                <ul>
-                    <li> <span class="btn btn-sm btn-indigo" data-value="true" id="btnEx"
-                            onclick="changeValue(this)">+</span> <span class="fw-bold text-indigo">[ Prioridad EX ]
-                        </span> = Solo sale 1 vez y no han salido
-                        anteriormente.</li>
-                    <li> <span class="btn btn-sm btn-danger" data-value="true" id="btnA"
-                            onclick="changeValue(this)">+</span> <span class="fw-bold text-danger">[ Prioridad A ]
-                        </span> = No ha vuelto ha salir.</li>
-                    <li> <span class="btn btn-sm btn-warning" data-value="true" id="btnB"
-                            onclick="changeValue(this)">+</span> <span class="fw-bold text-warning">[ Prioridad B ]
-                        </span> = Volvera una segunda vez.</li>
-                    <li> <span class="btn btn-sm btn-success" data-value="true" id="btnC"
-                            onclick="changeValue(this)">+</span> <span class="fw-bold text-success">[ Prioridad C ]
-                        </span> = Volvera dos veces más.</li>
-                    <li> <span class="btn btn-sm btn-info" data-value="true" id="btnD"
-                            onclick="changeValue(this)">+</span> <span class="fw-bold text-info">[ Prioridad D ] </span>
-                        = Volvera varias veces.</li>
-                </ul>
+                <p class="m-0" >
+                    <span class="btn btn-sm btn-indigo" data-value="true" id="btnEx" onclick="changeValue(this)">+</span>
+                    <span class="fw-bold text-indigo">[ Prioridad EX ]
+                    </span>: Solo sale 1 vez y no han salido anteriormente.
+                </p>
+
+                <p class="m-0" >
+                    <span class="btn btn-sm btn-danger" data-value="true" id="btnA" onclick="changeValue(this)">+</span>
+                    <span class="fw-bold text-danger">[ Prioridad A ]
+                    </span>: No ha vuelto ha salir.
+                </p>
+
+                <p class="m-0" >
+                    <span class="btn btn-sm btn-warning" data-value="true" id="btnB" onclick="changeValue(this)">+</span>
+                    <span class="fw-bold text-warning">[ Prioridad B ]
+                    </span>: Volvera una segunda vez.
+                </p>
+
+                <p class="m-0" >
+                    <span class="btn btn-sm btn-success" data-value="true" id="btnC" onclick="changeValue(this)">+</span>
+                    <span class="fw-bold text-success">[ Prioridad C ]
+                    </span>: Volvera dos veces más.
+                </p>
+
+                <p class="m-0" >
+                    <span class="btn btn-sm btn-info" data-value="true" id="btnD" onclick="changeValue(this)">+</span>
+                    <span class="fw-bold text-info">[ Prioridad D ]</span>
+                    : Volvera varias veces.
+                </p>
             </div>
             <div class="col-12 col-md-6">
                 <p class="fst-italic fs-6 text-secondary">
@@ -64,10 +75,10 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-10 col-12">
+            <div class="col-lg-8 col-12">
                 <h3>Servants: <span id="resultServant">?</span> de <span id="totalServant">?</span></h3>
             </div>
-            <div class="col-lg-2 col-12">
+            <div class="col-lg-4 col-12 d-flex">
                 <label for="filterByClass">Filtrar por clase:</label>
                 <select class="form-control bg-dark text-info" onchange="filterServant()" name="filterByClass"
                     id="filterByClass">
