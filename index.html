@@ -20,65 +20,81 @@
 <body style="background-color: #06070c; color: white;">
 
     <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-12 col-md-6">
-                <h1 class="text-primary">Lista de servants</h1>
-            </div>
-            <div class="col-12 col-md-6">
-                <label for="filterByName" class="">Buscar por nombre:</label>
-                <input id="filterByName" onchange="filterServant()" class="form-control bg-dark text-info" type="text">
-
-            </div>
-        </div>
+        <h1 class="text-primary text-center">Lista de servants</h1>
 
         <div class="row mt-2">
+            <!-- filtrar por prioridad -->
             <div class="col-12 col-md-6">
-                <p class="m-0" >
-                    <span class="btn btn-sm btn-indigo" data-value="true" id="btnEx" onclick="changeValue(this)">+</span>
+                <h4>Filtrar por prioridad:</h4>
+                <p class="m-0">
+                    <span class="btn btn-sm btn-indigo" data-value="true" id="btnEx"
+                        onclick="changeValue(this)">+</span>
                     <span class="fw-bold text-indigo">[ Prioridad EX ]
                     </span>: Solo sale 1 vez y no han salido anteriormente.
                 </p>
 
-                <p class="m-0" >
+                <p class="m-0">
                     <span class="btn btn-sm btn-danger" data-value="true" id="btnA" onclick="changeValue(this)">+</span>
                     <span class="fw-bold text-danger">[ Prioridad A ]
                     </span>: No ha vuelto ha salir.
                 </p>
 
-                <p class="m-0" >
-                    <span class="btn btn-sm btn-warning" data-value="true" id="btnB" onclick="changeValue(this)">+</span>
+                <p class="m-0">
+                    <span class="btn btn-sm btn-warning" data-value="true" id="btnB"
+                        onclick="changeValue(this)">+</span>
                     <span class="fw-bold text-warning">[ Prioridad B ]
                     </span>: Volvera una segunda vez.
                 </p>
 
-                <p class="m-0" >
-                    <span class="btn btn-sm btn-success" data-value="true" id="btnC" onclick="changeValue(this)">+</span>
+                <p class="m-0">
+                    <span class="btn btn-sm btn-success" data-value="true" id="btnC"
+                        onclick="changeValue(this)">+</span>
                     <span class="fw-bold text-success">[ Prioridad C ]
                     </span>: Volvera dos veces más.
                 </p>
 
-                <p class="m-0" >
+                <p class="m-0">
                     <span class="btn btn-sm btn-info" data-value="true" id="btnD" onclick="changeValue(this)">+</span>
                     <span class="fw-bold text-info">[ Prioridad D ]</span>
                     : Volvera varias veces.
                 </p>
             </div>
-            <div class="col-12 col-md-6">
-                <p class="fst-italic fs-6 text-secondary">
-                    La prioridad es relativa a la cantida de veces que reaparece el servant desde su fecha de banner
-                    hasta la
-                    actualidad en JP. Por eso un mismo servant puede tener prioridad B y prioridad A más adelante. Los
-                    prioridad EX
-                    no han tenido ninguna otra reaparición antes ni despues en esta lista.
-                </p>
+
+            <!-- Nota 1 -->
+            <div class="col-12 col-md-6 mt-2 mt-md-0">
+                <div class="d-md-none">
+                    <button class="btn btn-indigo" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Nota
+                    </button>
+                </div>
+                <div class="collapse show" id="collapseExample">
+                    <p class="fst-italic fs-6 text-secondary">
+                        La prioridad es relativa a la cantida de veces que reaparece el servant desde su fecha de banner
+                        hasta la
+                        actualidad en JP. Por eso un mismo servant puede tener prioridad B y prioridad A más adelante.
+                        Los
+                        prioridad EX
+                        no han tenido ninguna otra reaparición antes ni despues en esta lista.
+                    </p>
+                </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-8 col-12">
-                <h3>Servants: <span id="resultServant">?</span> de <span id="totalServant">?</span></h3>
+            <!-- cantidad de servants -->
+            <div class="col-12 col-lg-4 d-flex align-items-center mt-2 mt-sm-0">
+                <h4 class="m-0">Servants: <span id="resultServant">?</span> de <span id="totalServant">?</span></h4>
             </div>
-            <div class="col-lg-4 col-12 d-flex">
+
+            <!-- Filtrar por nombre -->
+            <div class="col-12 col-lg-4 mt-2 mt-sm-0">
+                <label for="filterByName">Buscar por nombre:</label>
+                <input id="filterByName" onchange="filterServant()" class="form-control bg-dark text-info" type="text">
+            </div>
+
+            <!-- Filtrar por clase -->
+            <div class="col-12 col-lg-4 mt-2 mt-sm-0">
                 <label for="filterByClass">Filtrar por clase:</label>
                 <select class="form-control bg-dark text-info" onchange="filterServant()" name="filterByClass"
                     id="filterByClass">
