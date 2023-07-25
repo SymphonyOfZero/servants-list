@@ -65,36 +65,41 @@
                 <div class="d-md-none">
                     <button class="btn btn-indigo" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                        Nota
+                        Ver/Ocultar Nota
                     </button>
                 </div>
                 <div class="collapse show" id="collapseExample">
-                    <p class="fst-italic fs-6 text-secondary">
+                    <!-- <p class="fst-italic fs-6 text-secondary">
                         La prioridad es relativa a la cantida de veces que reaparece el servant desde su fecha de banner
-                        hasta la
-                        actualidad en JP. Por eso un mismo servant puede tener prioridad B y prioridad A más adelante.
-                        Los
-                        prioridad EX
+                        hasta la actualidad en JP.<br> Por eso un mismo servant puede tener prioridad B y prioridad A
+                        más adelante.<br>
+                        Los prioridad EX
                         no han tenido ninguna otra reaparición antes ni despues en esta lista.
-                    </p>
+                    </p> -->
+                    <p class="fst-italic fs-6 text-secondary">La prioridad hace referencia a la cantida de veces que aparece el servant desde su fecha de banner
+                        hasta la actualidad en JP.</p>
+                    <p class="fst-italic fs-6 text-secondary">Un mismo servant puede tener prioridad B y prioridad A más adelante.</p>
+                    <p class="fst-italic fs-6 text-secondary">Los prioridad EX
+                        no han tenido ninguna otra reaparición antes ni despues en esta lista.</p>
+                    <p class="fst-italic fs-6 text-secondary">No se toma en cuenta benners de pago.</p>
                 </div>
             </div>
         </div>
 
         <div class="row">
             <!-- cantidad de servants -->
-            <div class="col-12 col-lg-4 d-flex align-items-center mt-2 mt-sm-0">
+            <div class="col-12 col-md-12 col-lg-4 d-flex align-items-center mt-2 mt-sm-0">
                 <h4 class="m-0">Servants: <span id="resultServant">?</span> de <span id="totalServant">?</span></h4>
             </div>
 
             <!-- Filtrar por nombre -->
-            <div class="col-12 col-lg-4 mt-2 mt-sm-0">
+            <div class="col-12 col-md-6 col-lg-4 mt-2 mt-sm-0">
                 <label for="filterByName">Buscar por nombre:</label>
                 <input id="filterByName" onchange="filterServant()" class="form-control bg-dark text-info" type="text">
             </div>
 
             <!-- Filtrar por clase -->
-            <div class="col-12 col-lg-4 mt-2 mt-sm-0">
+            <div class="col-12 col-md-6 col-lg-4 mt-2 mt-sm-0">
                 <label for="filterByClass">Filtrar por clase:</label>
                 <select class="form-control bg-dark text-info" onchange="filterServant()" name="filterByClass"
                     id="filterByClass">
