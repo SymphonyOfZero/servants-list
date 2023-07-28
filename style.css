@@ -14,3 +14,52 @@
 .btn-indigo:hover{
     background-color: #570ecc;
 }
+
+.bg-indigo{
+    background-color: #6610f2 !important;
+    color: #fff;
+}
+
+.text-sm{
+    font-size: 1rem;
+}
+
+
+@media (max-width: 576px) {
+    .text-sm{
+        font-size: .8rem;
+    }
+    .boxServant{
+        max-width: 33%;
+    }
+}
+
+@media (min-width: 576px) {
+    .boxServant{
+        max-width: 25%;
+    }
+}
+
+@media (min-width: 768px) {
+    .boxServant{
+        max-width: 20%;
+    }
+}
+
+@media (min-width: 992px) {
+    .boxServant{
+        max-width: 20%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .boxServant{
+        max-width: 12.5%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .boxServant{
+        max-width: 10%;
+    }
+}

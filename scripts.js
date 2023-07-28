@@ -5,17 +5,44 @@ servants.sort((a, b) => {
     }
 })
 
-// Cambia los valores de los data-value asi como el simbolo +/-
-const changeValue = (selected) => {
-    let elementHtml = document.getElementById(selected.id)
-    if (selected.dataset.value == "true") {
-        elementHtml.dataset.value = "false"
-        elementHtml.innerHTML = "-"
-    } else {
-        elementHtml.dataset.value = "true"
-        elementHtml.innerHTML = "+"
+const filterByAlignment = () => {
+    let alignmentOptions1 = []
+    let alignmentOptions2 = []
+
+    document.getElementById('Lawful').checked ? alignmentOptions1.push('Lawful') : ''
+    document.getElementById('Neutral').checked ? alignmentOptions1.push('Neutral') : ''
+    document.getElementById('Chaotic').checked ? alignmentOptions1.push('Chaotic') : ''
+
+    if (alignmentOptions1.length == 0) {
+        alignmentOptions1 = ['Lawful', 'Neutral', 'Chaotic']
     }
-    filterServant()
+
+    document.getElementById('Good').checked ? alignmentOptions2.push('Good') : ''
+    document.getElementById('Balanced').checked ? alignmentOptions2.push('Balanced') : ''
+    document.getElementById('Evil').checked ? alignmentOptions2.push('Evil') : ''
+    document.getElementById('Summer').checked ? alignmentOptions2.push('Summer') : ''
+    document.getElementById('Madness').checked ? alignmentOptions2.push('Madness') : ''
+    document.getElementById('Bride').checked ? alignmentOptions2.push('Bride') : ''
+
+    if (alignmentOptions2.length == 0) {
+        alignmentOptions2 = ['Good', 'Balanced', 'Evil', 'Summer', 'Madness', 'Bride']
+    }
+
+    let filteredServants = servants.filter(a => {
+        if (a.alignment.filter(b => alignmentOptions1.includes(b)).length > 0) {
+            return 1
+        }
+    })
+
+    filteredServants = filteredServants.filter(a => {
+        if (a.alignment.filter(b => alignmentOptions2.includes(b)).length > 0) {
+            return 1
+        }
+    })
+
+
+    // console.log(filteredServants.filter(a => ['EX','A'].includes(a.priority)))
+
 }
 
 // funcion para ordenar por nombre todos los servants
@@ -68,14 +95,14 @@ const printServants = () => {
         }
 
         box.innerHTML +=
-            `<div class="col-6 col-sm-4 col-md-3 col-lg-2 mt-3 boxServant" data-id="${x.idImg}" data-priority="${x.priority}">
+            `<div class="boxServant flex-fill p-1" data-id="${x.idImg}" data-priority="${x.priority}">
                 <div class="card card-servants w-100 h-100">
                     <div class="card-body p-2">
-                        <h6 class="card-title text-primary">${x.name}</h6>
-                        <h6 class="card-subtitle text-secondary">[${x.class}]</h6>
-                        <h6 class="text-${priorityColor} fw-bold">[ Prioridad ${x.priority} ]</h6>
-                        <img src="img/${x.idImg}.jpg" class="card-img-top" alt="imagen de ${x.name}">
-                        <p class="card-text text-info">${fecha}</p>
+                        <h6 class="card-title text-primary text-sm">${x.name}</h6>
+                        <h6 class="card-subtitle text-secondary text-sm">[${x.class}]</h6>
+                        <h6 class="text-${priorityColor} fw-bold text-sm">Prioridad ${x.priority}</h6>
+                        <img src="./img/servants/${x.idImg}.jpg" class="w-100" alt="imagen de ${x.name}">
+                        <p class="card-text m-0 text-info text-nowrap text-sm">${fecha}</p>
                     </div>
                 </div>
             </div>`
@@ -86,28 +113,76 @@ const printServants = () => {
 const filterServant = () => {
     let servantClass = document.getElementById('filterByClass').value
     let servantName = document.getElementById('filterByName').value
-    let filterOptions = []
+    let servantGender = document.getElementById("filterByGender").value
 
-    document.getElementById("btnEx").dataset.value == "true" ? filterOptions.push('EX') : ""
-    document.getElementById("btnA").dataset.value == "true" ? filterOptions.push('A') : ""
-    document.getElementById("btnB").dataset.value == "true" ? filterOptions.push('B') : ""
-    document.getElementById("btnC").dataset.value == "true" ? filterOptions.push('C') : ""
-    document.getElementById("btnD").dataset.value == "true" ? filterOptions.push('D') : ""
+    // obtiene las prioridades
+    let priorityOptions = []
+    document.getElementById("priorityEX").checked == true ? priorityOptions.push('EX') : ""
+    document.getElementById("priorityA").checked == true ? priorityOptions.push('A') : ""
+    document.getElementById("priorityB").checked == true ? priorityOptions.push('B') : ""
+    document.getElementById("priorityC").checked == true ? priorityOptions.push('C') : ""
+    document.getElementById("priorityD").checked == true ? priorityOptions.push('D') : ""
+    if (priorityOptions.length == 0) {
+        priorityOptions = ['EX', 'A', 'B', 'C', 'D']
+    }
 
+
+    let alignmentOptions1 = []
+    document.getElementById('Lawful').checked ? alignmentOptions1.push('Lawful') : ''
+    document.getElementById('Neutral').checked ? alignmentOptions1.push('Neutral') : ''
+    document.getElementById('Chaotic').checked ? alignmentOptions1.push('Chaotic') : ''
+    if (alignmentOptions1.length == 0) {
+        alignmentOptions1 = ['Lawful', 'Neutral', 'Chaotic']
+    }
+
+    let alignmentOptions2 = []
+    document.getElementById('Good').checked ? alignmentOptions2.push('Good') : ''
+    document.getElementById('Balanced').checked ? alignmentOptions2.push('Balanced') : ''
+    document.getElementById('Evil').checked ? alignmentOptions2.push('Evil') : ''
+    document.getElementById('Summer').checked ? alignmentOptions2.push('Summer') : ''
+    document.getElementById('Madness').checked ? alignmentOptions2.push('Madness') : ''
+    document.getElementById('Bride').checked ? alignmentOptions2.push('Bride') : ''
+    if (alignmentOptions2.length == 0) {
+        alignmentOptions2 = ['Good', 'Balanced', 'Evil', 'Summer', 'Madness', 'Bride']
+    }
+
+
+    // ===== Ocultar/Mostar según los filtros ===== //
+
+    // oculta todo
     document.querySelectorAll('.boxServant').forEach(div => {
         div.classList.add("d-none")
     })
 
-    let newServants = servants.filter((a) => a.name.toLowerCase().includes(servantName.toLowerCase()) && ['EX', 'A'].includes(a.priority) && a.class.includes(servantClass))
-    newServants.forEach(i => {
+    // Filtra los servants por genero, clase y nombre
+    let filteredServants = servants.filter((a) => a.name.toLowerCase().includes(servantName.toLowerCase()) && a.class.includes(servantClass) && a.gender.includes(servantGender))
+
+    // Filtra por alineamiento (primario) 
+    filteredServants = filteredServants.filter(a => {
+        if (a.alignment.filter(b => alignmentOptions1.includes(b)).length > 0) {
+            return 1
+        }
+    })
+
+    // Filtra por alineamiento (secundario) 
+    filteredServants = filteredServants.filter(a => {
+        if (a.alignment.filter(b => alignmentOptions2.includes(b)).length > 0) {
+            return 1
+        }
+    })
+
+
+    filteredServants.filter((a) => ['EX', 'A'].includes(a.priority)).forEach(i => {
         document.querySelectorAll(`div[data-id='${i.idImg}']`).forEach(div => {
-            if (filterOptions.includes(div.dataset.priority)) {
+            if (priorityOptions.includes(div.dataset.priority)) {
                 div.classList.remove("d-none")
             }
         })
     })
 
-    let countServants = servants.filter((a) => a.name.toLowerCase().includes(servantName.toLowerCase()) && filterOptions.includes(a.priority) && a.class.includes(servantClass))
+
+    // calcular cuantos servants quedan despues del filtro
+    let countServants = filteredServants.filter((a) => priorityOptions.includes(a.priority))
 
     let prioEx = countServants.filter(a => a.priority == 'EX').length
     let prioA = countServants.filter(a => a.priority == 'A').length

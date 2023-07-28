@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servants</title>
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <title>Lista de Servants</title>
 
     <!-- Bootstrap CSS/JS -->
     <link rel="stylesheet" href="./bootstrap-5.3.0/css/bootstrap.min.css">
     <script src="./bootstrap-5.3.0/js/bootstrap.min.js"></script>
 
     <!-- Custom CSS/JS -->
-    <link rel="icon" type="image/jpg" href="favicon.ico" />
-    <link rel="stylesheet" href="style.css">
-    <script src="servantsList.js"></script>
-    <script src="scripts.js"></script>
+    <link rel="icon" type="image/jpg" href="./favicon.ico" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="./servantsList.js"></script>
+    <script src="./scripts.js"></script>
 </head>
 
 <body style="background-color: #06070c; color: white;">
@@ -26,38 +27,31 @@
             <!-- filtrar por prioridad -->
             <div class="col-12 col-md-6">
                 <h4>Filtrar por prioridad:</h4>
-                <p class="m-0">
-                    <span class="btn btn-sm btn-indigo" data-value="true" id="btnEx"
-                        onclick="changeValue(this)">+</span>
-                    <span class="fw-bold text-indigo">[ Prioridad EX ]
-                    </span>: Solo sale 1 vez y no han salido anteriormente.
-                </p>
-
-                <p class="m-0">
-                    <span class="btn btn-sm btn-danger" data-value="true" id="btnA" onclick="changeValue(this)">+</span>
-                    <span class="fw-bold text-danger">[ Prioridad A ]
-                    </span>: No ha vuelto ha salir.
-                </p>
-
-                <p class="m-0">
-                    <span class="btn btn-sm btn-warning" data-value="true" id="btnB"
-                        onclick="changeValue(this)">+</span>
-                    <span class="fw-bold text-warning">[ Prioridad B ]
-                    </span>: Volvera una segunda vez.
-                </p>
-
-                <p class="m-0">
-                    <span class="btn btn-sm btn-success" data-value="true" id="btnC"
-                        onclick="changeValue(this)">+</span>
-                    <span class="fw-bold text-success">[ Prioridad C ]
-                    </span>: Volvera dos veces más.
-                </p>
-
-                <p class="m-0">
-                    <span class="btn btn-sm btn-info" data-value="true" id="btnD" onclick="changeValue(this)">+</span>
-                    <span class="fw-bold text-info">[ Prioridad D ]</span>
-                    : Volvera varias veces.
-                </p>
+                <div>
+                    <input type="checkbox" name="priorityEX" id="priorityEX" class="form-check-input bg-indigo" onchange="filterServant()">
+                    <label for="priorityEX" class="form-check-label user-select-none fw-bold text-indigo">Prioridad EX</label>
+                    <span>: Unica oportunidad</span>
+                </div>
+                <div>
+                    <input type="checkbox" name="priorityA" id="priorityA" class="form-check-input bg-danger" onchange="filterServant()">
+                    <label for="priorityA" class="form-check-label user-select-none fw-bold text-danger">Prioridad A</label>
+                    <span>: No ha vuelto ha salir</span>
+                </div>
+                <div>
+                    <input type="checkbox" name="priorityB" id="priorityB" class="form-check-input bg-warning" onchange="filterServant()">
+                    <label for="priorityB" class="form-check-label user-select-none fw-bold text-warning">Prioridad B</label>
+                    <span>: Volvera una segunda vez</span>
+                </div>
+                <div>
+                    <input type="checkbox" name="priorityC" id="priorityC" class="form-check-input bg-success" onchange="filterServant()">
+                    <label for="priorityC" class="form-check-label user-select-none fw-bold text-success">Prioridad C</label>
+                    <span>: Volvera dos veces más</span>
+                </div>
+                <div>
+                    <input type="checkbox" name="priorityD" id="priorityD" class="form-check-input bg-info" onchange="filterServant()">
+                    <label for="priorityD" class="form-check-label user-select-none fw-bold text-info">Prioridad D</label>
+                    <span>: Volvera varias veces</span>
+                </div>
             </div>
 
             <!-- Nota 1 -->
@@ -69,16 +63,11 @@
                     </button>
                 </div>
                 <div class="collapse show" id="collapseExample">
-                    <!-- <p class="fst-italic fs-6 text-secondary">
-                        La prioridad es relativa a la cantida de veces que reaparece el servant desde su fecha de banner
-                        hasta la actualidad en JP.<br> Por eso un mismo servant puede tener prioridad B y prioridad A
-                        más adelante.<br>
-                        Los prioridad EX
-                        no han tenido ninguna otra reaparición antes ni despues en esta lista.
-                    </p> -->
-                    <p class="fst-italic fs-6 text-secondary">La prioridad hace referencia a la cantida de veces que aparece el servant desde su fecha de banner
+                    <p class="fst-italic fs-6 text-secondary">La prioridad hace referencia a la cantida de veces que
+                        aparece el servant desde su fecha de banner
                         hasta la actualidad en JP.</p>
-                    <p class="fst-italic fs-6 text-secondary">Un mismo servant puede tener prioridad B y prioridad A más adelante.</p>
+                    <p class="fst-italic fs-6 text-secondary">Un mismo servant puede tener prioridad B y prioridad A más
+                        adelante.</p>
                     <p class="fst-italic fs-6 text-secondary">Los prioridad EX
                         no han tenido ninguna otra reaparición antes ni despues en esta lista.</p>
                     <p class="fst-italic fs-6 text-secondary">No se toma en cuenta benners de pago.</p>
@@ -88,18 +77,19 @@
 
         <div class="row">
             <!-- cantidad de servants -->
-            <div class="col-12 col-md-12 col-lg-4 d-flex align-items-center mt-2 mt-sm-0">
-                <h4 class="m-0">Servants: <span id="resultServant">?</span> de <span id="totalServant">?</span></h4>
+            <div class="col-12 my-2">
+                <h4 class="m-0 text-primary">Servants: <span id="resultServant">?</span> de <span
+                        id="totalServant">?</span></h4>
             </div>
 
             <!-- Filtrar por nombre -->
-            <div class="col-12 col-md-6 col-lg-4 mt-2 mt-sm-0">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 mt-2 mt-sm-0">
                 <label for="filterByName">Buscar por nombre:</label>
                 <input id="filterByName" onchange="filterServant()" class="form-control bg-dark text-info" type="text">
             </div>
 
             <!-- Filtrar por clase -->
-            <div class="col-12 col-md-6 col-lg-4 mt-2 mt-sm-0">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2 mt-2 mt-sm-0">
                 <label for="filterByClass">Filtrar por clase:</label>
                 <select class="form-control bg-dark text-info" onchange="filterServant()" name="filterByClass"
                     id="filterByClass">
@@ -120,9 +110,89 @@
                     <option value="Beast">Beast</option>
                 </select>
             </div>
+
+            <!-- Filtrar por genero -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2 mt-2 mt-md-0">
+                <label for="filterByGender">Filtrar por genero:</label>
+                <select class="form-control bg-dark text-info" onchange="filterServant()" name="filterByGender"
+                    id="filterByGender">
+                    <option value="">Todos</option>
+                    <option value="Female">Femeninos</option>
+                    <option value="Male">Masculinos</option>
+                </select>
+            </div>
+
+            <!-- Filtrar por alineamiento -->
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mt-2 mt-md-0">
+                <p class="mb-1">Filtrar por alineamiento:</p>
+
+                <div class="border rounded py-2">
+
+                    <!-- primer grupo de alineacion -->
+                    <div class="d-flex">
+                        <div class="flex-fill px-2 py-1">
+                            <input type="checkbox" class="form-check-input" name="lawful" id="Lawful" value="Lawful"
+                                 onchange="filterServant()">
+                            <label class="form-check-label text-info user-select-none" for="Lawful">Legal</label>
+                        </div>
+
+                        <div class="flex-fill px-2 py-1">
+                            <input type="checkbox" class="form-check-input" name="neutral" id="Neutral" value="Neutral"
+                                 onchange="filterServant()">
+                            <label class="form-check-label text-info user-select-none" for="Neutral">Neutral</label>
+                        </div>
+
+                        <div class="flex-fill px-2 py-1">
+                            <input type="checkbox" class="form-check-input" name="chaotic" id="Chaotic" value="Chaotic"
+                                 onchange="filterServant()">
+                            <label class="form-check-label text-info user-select-none" for="Chaotic">Caotico</label>
+                        </div>
+                    </div>
+
+                    <hr class="my-1 border border">
+
+                    <!-- segundo grupo de alineacion -->
+                    <div class="d-flex">
+                        <div class="flex-fill px-2 py-1">
+                            <input type="checkbox" class="form-check-input" name="good" id="Good" value="Good" 
+                                onchange="filterServant()">
+                            <label class="form-check-label text-info user-select-none" for="Good">Bueno</label>
+                        </div>
+                        <div class="flex-fill px-2 py-1">
+                            <input type="checkbox" class="form-check-input" name="balanced" id="Balanced"
+                                value="Balanced"  onchange="filterServant()">
+                            <label class="form-check-label text-info user-select-none" for="Balanced">Equilibrado</label>
+                        </div>
+                        <div class="flex-fill px-2 py-1">
+                            <input type="checkbox" class="form-check-input" name="evil" id="Evil" value="Evil" 
+                                onchange="filterServant()">
+                            <label class="form-check-label text-info user-select-none" for="Evil">Malo</label>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="flex-fill px-2 py-1">
+                            <input type="checkbox" class="form-check-input" name="summer" id="Summer" value="Summer"
+                                 onchange="filterServant()">
+                            <label class="form-check-label text-info user-select-none" for="Summer">Veraniego</label>
+                        </div>
+                        <div class="flex-fill px-2 py-1">
+                            <input type="checkbox" class="form-check-input" name="madness" id="Madness" value="Madness"
+                                 onchange="filterServant()">
+                            <label class="form-check-label text-info user-select-none" for="Madness">Locura</label>
+                        </div>
+                        <div class="flex-fill px-2 py-1">
+                            <input type="checkbox" class="form-check-input" name="bride" id="Bride" value="Bride"
+                                 onchange="filterServant()">
+                            <label class="form-check-label text-info user-select-none" for="Bride">Novia</label>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 
-        <div id="box" class="row mt-1">
+        <div id="box" class="d-flex flex-wrap mt-1">
         </div>
     </div>
 
