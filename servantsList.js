@@ -87,8 +87,8 @@ const servants = [
     { idImg: 31, class: "Berserk", name: 'Minamoto-no-Raikou', bannerDate: '2024-08-31', priority: 'B', gender:'Female', alignment:['Chaotic','Good']},
     { idImg: 31, class: "Berserk", name: 'Minamoto-no-Raikou', bannerDate: '2025-04-10', priority: 'A', gender:'Female', alignment:['Chaotic','Good']},
 
-    { idImg: 32, class: "Rider", name: 'Leonardo da Vinci (Rider)', bannerDate: '2024-04-20', priority: 'B', gender:'Female', alignment:['Lawful','Rider']},
-    { idImg: 32, class: "Rider", name: 'Leonardo da Vinci (Rider)', bannerDate: '2024-11-23', priority: 'A', gender:'Female', alignment:['Lawful','Rider']},
+    { idImg: 32, class: "Rider", name: 'Leonardo da Vinci (Rider)', bannerDate: '2024-04-20', priority: 'B', gender:'Female', alignment:['Lawful','Good']},
+    { idImg: 32, class: "Rider", name: 'Leonardo da Vinci (Rider)', bannerDate: '2024-11-23', priority: 'A', gender:'Female', alignment:['Lawful','Good']},
 
     { idImg: 33, class: "Moon Cancer", name: 'Archetype Earth', bannerDate: '2024-07-31', priority: 'EX', gender:'Female', alignment:['Chaotic','Neutral','Good']},
 
