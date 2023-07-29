@@ -55,6 +55,8 @@ const printServants = () => {
     let totalServant = servants.filter(a => ['EX', 'A'].includes(a.priority)).length
     document.getElementById('resultServant').innerHTML = totalServant
     document.getElementById('totalServant').innerHTML = totalServant
+    let priorityColor = 'secondary'
+    let rarityText = '???'
 
     servants.forEach(x => {
         // Determina el color y el simbolo de la prioridad
@@ -68,8 +70,6 @@ const printServants = () => {
             priorityColor = 'success'
         } else if (x.priority == 'D') {
             priorityColor = 'info'
-        } else {
-            priorityColor = 'secondary'
         }
 
         // Acomoda las fechas
@@ -102,6 +102,7 @@ const printServants = () => {
                         <h6 class="card-subtitle text-secondary text-sm">[${x.class}]</h6>
                         <h6 class="text-${priorityColor} fw-bold text-sm">Prioridad ${x.priority}</h6>
                         <img src="./img/servants/${x.idImg}.jpg" class="w-100" alt="imagen de ${x.name}">
+                        <p class="card-text m-0 text-warning">Rareza: ${x.rarity}<i class="bi-star-fill"></i></p>
                         <p class="card-text m-0 text-info text-nowrap text-sm">${fecha}</p>
                     </div>
                 </div>
