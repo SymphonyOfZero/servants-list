@@ -33,8 +33,9 @@ const servants = [
     { idImg: 13, class: "Assasin", name: 'First Hassan', bannerDate: '2024/1/1', priority: 'B', gender:'Male', alignment:['Lawful','Evil'], rarity: 5},
     { idImg: 13, class: "Assasin", name: 'First Hassan', bannerDate: '2025/4/19', priority: 'A', gender:'Male', alignment:['Lawful','Evil'], rarity: 5},
 
-    { idImg: 14, class: "Foreigner", name: 'Van Gogh', bannerDate: '2023/9/29', priority: 'B', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
-    { idImg: 14, class: "Foreigner", name: 'Van Gogh', bannerDate: '2024/10/26', priority: 'A', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
+    { idImg: 14, class: "Foreigner", name: 'Van Gogh', bannerDate: '2023/9/29', priority: 'C', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
+    { idImg: 14, class: "Foreigner", name: 'Van Gogh', bannerDate: '2024/10/26', priority: 'B', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
+    { idImg: 14, class: "Foreigner", name: 'Van Gogh', bannerDate: '2025/8/1', priority: 'A', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
 
     { idImg: 15, class: "Beast", name: "Sodom's Beast / Draco", bannerDate: '2025/4/26', priority: 'EX', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
 
@@ -47,7 +48,8 @@ const servants = [
     { idImg: 18, class: "Assasin", name: 'Kama', bannerDate: '2024/7/13', priority: 'B', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
     { idImg: 18, class: "Assasin", name: 'Kama', bannerDate: '2025/6/21', priority: 'A', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
 
-    { idImg: 19, class: "Avenger", name: 'Space Ishtar', bannerDate: '2024/8/31', priority: 'EX', gender:'Female', alignment:['Lawful','Evil'], rarity: 5},
+    { idImg: 19, class: "Avenger", name: 'Space Ishtar', bannerDate: '2024/8/31', priority: 'B', gender:'Female', alignment:['Lawful','Evil'], rarity: 5},
+    { idImg: 19, class: "Avenger", name: 'Space Ishtar', bannerDate: '2025/08/01', priority: 'A', gender:'Female', alignment:['Lawful','Evil'], rarity: 5},
 
     { idImg: 20, class: "Avenger", name: 'Demon King Nobunaga (Oda Nobunaga)', bannerDate: '2023/11/22', priority: 'C', gender:'Female', alignment:['Chaotic','Balanced'], rarity: 5},
     { idImg: 20, class: "Avenger", name: 'Demon King Nobunaga (Oda Nobunaga)', bannerDate: '2024/9/17', priority: 'B', gender:'Female', alignment:['Chaotic','Balanced'], rarity: 5},
@@ -68,100 +70,102 @@ const servants = [
 
     { idImg: 25, class: "Archer", name: 'Durga', bannerDate: '2025/6/25', priority: 'EX', gender:'Female', alignment:['Lawful','Balanced'], rarity: 5},
 
-    { idImg: 26, class: "Saber", name: 'Ibuki-Douji', bannerDate: '2023-11-10', priority: 'C', gender:'Female', alignment:['Chaotic','Good'], rarity: 5},
-    { idImg: 26, class: "Saber", name: 'Ibuki-Douji', bannerDate: '2024-08-31', priority: 'B', gender:'Female', alignment:['Chaotic','Good'], rarity: 5},
-    { idImg: 26, class: "Saber", name: 'Ibuki-Douji', bannerDate: '2025-04-10', priority: 'A', gender:'Female', alignment:['Chaotic','Good'], rarity: 5},
+    { idImg: 26, class: "Saber", name: 'Ibuki-Douji', bannerDate: '2023/11/10', priority: 'C', gender:'Female', alignment:['Chaotic','Good'], rarity: 5},
+    { idImg: 26, class: "Saber", name: 'Ibuki-Douji', bannerDate: '2024/8/31', priority: 'B', gender:'Female', alignment:['Chaotic','Good'], rarity: 5},
+    { idImg: 26, class: "Saber", name: 'Ibuki-Douji', bannerDate: '2025/4/10', priority: 'A', gender:'Female', alignment:['Chaotic','Good'], rarity: 5},
 
-    { idImg: 27, class: "Alter Ego", name: 'Manannan mac Lir (Bazett)', bannerDate: '2024-02-09', priority: 'B', gender:'Female', alignment:['Neutral','Good'], rarity: 5},
-    { idImg: 27, class: "Alter Ego", name: 'Manannan mac Lir (Bazett)', bannerDate: '2025-02-19', priority: 'A', gender:'Female', alignment:['Neutral','Good'], rarity: 5},
+    { idImg: 27, class: "Alter Ego", name: 'Manannan mac Lir (Bazett)', bannerDate: '2024/2/9', priority: 'B', gender:'Female', alignment:['Neutral','Good'], rarity: 5},
+    { idImg: 27, class: "Alter Ego", name: 'Manannan mac Lir (Bazett)', bannerDate: '2025/2/19', priority: 'A', gender:'Female', alignment:['Neutral','Good'], rarity: 5},
 
-    { idImg: 28, class: "Ruler", name: 'Altria Pendragon (Ruler)', bannerDate: '2024-07-21', priority: 'B', gender:'Female', alignment:['Lawful','Summer'], rarity: 5},
-    { idImg: 28, class: "Ruler", name: 'Altria Pendragon (Ruler)', bannerDate: '2025-06-28', priority: 'A', gender:'Female', alignment:['Lawful','Summer'], rarity: 5},
+    { idImg: 28, class: "Ruler", name: 'Altria Pendragon (Ruler)', bannerDate: '2024/7/21', priority: 'B', gender:'Female', alignment:['Lawful','Summer'], rarity: 5},
+    { idImg: 28, class: "Ruler", name: 'Altria Pendragon (Ruler)', bannerDate: '2025/6/28', priority: 'A', gender:'Female', alignment:['Lawful','Summer'], rarity: 5},
 
-    { idImg: 29, class: "Berserk", name: 'Arjuna (Alter)', bannerDate: '2024-03-02', priority: 'C', gender:'Male', alignment:['Lawful','Good','Evil'], rarity: 5},
-    { idImg: 29, class: "Berserk", name: 'Arjuna (Alter)', bannerDate: '2024-09-07', priority: 'B', gender:'Male', alignment:['Lawful','Good','Evil'], rarity: 5},
-    { idImg: 29, class: "Berserk", name: 'Arjuna (Alter)', bannerDate: '2025-03-08', priority: 'A', gender:'Male', alignment:['Lawful','Good','Evil'], rarity: 5},
+    { idImg: 29, class: "Berserk", name: 'Arjuna (Alter)', bannerDate: '2024/3/2', priority: 'C', gender:'Male', alignment:['Lawful','Good','Evil'], rarity: 5},
+    { idImg: 29, class: "Berserk", name: 'Arjuna (Alter)', bannerDate: '2024/9/7', priority: 'B', gender:'Male', alignment:['Lawful','Good','Evil'], rarity: 5},
+    { idImg: 29, class: "Berserk", name: 'Arjuna (Alter)', bannerDate: '2025/3/8', priority: 'A', gender:'Male', alignment:['Lawful','Good','Evil'], rarity: 5},
 
-    { idImg: 30, class: "Saber", name: 'Trung Sisters', bannerDate: '2024-04-06', priority: 'EX', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
+    { idImg: 30, class: "Saber", name: 'Trung Sisters', bannerDate: '2024/4/6', priority: 'B', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
+    { idImg: 30, class: "Saber", name: 'Trung Sisters', bannerDate: '2025/8/1', priority: 'A', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
 
-    { idImg: 31, class: "Berserk", name: 'Minamoto-no-Raikou', bannerDate: '2024-08-31', priority: 'B', gender:'Female', alignment:['Chaotic','Good'], rarity: 5},
-    { idImg: 31, class: "Berserk", name: 'Minamoto-no-Raikou', bannerDate: '2025-04-10', priority: 'A', gender:'Female', alignment:['Chaotic','Good'], rarity: 5},
+    { idImg: 31, class: "Berserk", name: 'Minamoto-no-Raikou', bannerDate: '2024/8/31', priority: 'B', gender:'Female', alignment:['Chaotic','Good'], rarity: 5},
+    { idImg: 31, class: "Berserk", name: 'Minamoto-no-Raikou', bannerDate: '2025/4/10', priority: 'A', gender:'Female', alignment:['Chaotic','Good'], rarity: 5},
 
-    { idImg: 32, class: "Rider", name: 'Leonardo da Vinci (Rider)', bannerDate: '2024-04-20', priority: 'B', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
-    { idImg: 32, class: "Rider", name: 'Leonardo da Vinci (Rider)', bannerDate: '2024-11-23', priority: 'A', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
+    { idImg: 32, class: "Rider", name: 'Leonardo da Vinci (Rider)', bannerDate: '2024/4/20', priority: 'B', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
+    { idImg: 32, class: "Rider", name: 'Leonardo da Vinci (Rider)', bannerDate: '2024/11/23', priority: 'A', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
 
-    { idImg: 33, class: "Moon Cancer", name: 'Archetype Earth', bannerDate: '2024-07-31', priority: 'EX', gender:'Female', alignment:['Chaotic','Neutral','Good'], rarity: 5},
+    { idImg: 33, class: "Moon Cancer", name: 'Archetype Earth', bannerDate: '2024/7/31', priority: 'EX', gender:'Female', alignment:['Chaotic','Neutral','Good'], rarity: 5},
 
-    { idImg: 34, class: "Lancer", name: 'Ereshkigal', bannerDate: '2023-10-12', priority: 'D', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
-    { idImg: 34, class: "Lancer", name: 'Ereshkigal', bannerDate: '2024-01-26', priority: 'C', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
-    { idImg: 34, class: "Lancer", name: 'Ereshkigal', bannerDate: '2024-08-31', priority: 'B', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
-    { idImg: 34, class: "Lancer", name: 'Ereshkigal', bannerDate: '2025-02-13', priority: 'A', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
+    { idImg: 34, class: "Lancer", name: 'Ereshkigal', bannerDate: '2023/10/12', priority: 'D', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
+    { idImg: 34, class: "Lancer", name: 'Ereshkigal', bannerDate: '2024/1/26', priority: 'C', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
+    { idImg: 34, class: "Lancer", name: 'Ereshkigal', bannerDate: '2024/8/31', priority: 'B', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
+    { idImg: 34, class: "Lancer", name: 'Ereshkigal', bannerDate: '2025/2/13', priority: 'A', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
 
-    { idImg: 35, class: "Archer", name: 'Ishtar', bannerDate: '2024-01-26', priority: 'B', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
-    { idImg: 35, class: "Archer", name: 'Ishtar', bannerDate: '2024-08-31', priority: 'A', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
+    { idImg: 35, class: "Archer", name: 'Ishtar', bannerDate: '2024/1/26', priority: 'B', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
+    { idImg: 35, class: "Archer", name: 'Ishtar', bannerDate: '2024/8/31', priority: 'A', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
 
-    { idImg: 36, class: "Foreigner", name: 'Kukulkan', bannerDate: '2025-02-07', priority: 'B', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
-    { idImg: 36, class: "Foreigner", name: 'Kukulkan', bannerDate: '2025-06-07', priority: 'A', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
+    { idImg: 36, class: "Foreigner", name: 'Kukulkan', bannerDate: '2025/2/7', priority: 'B', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
+    { idImg: 36, class: "Foreigner", name: 'Kukulkan', bannerDate: '2025/6/7', priority: 'A', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
 
-    { idImg: 37, class: "Assasin", name: 'Kashin Koji', bannerDate: '2025-05-24', priority: 'EX', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
+    { idImg: 37, class: "Assasin", name: 'Kashin Koji', bannerDate: '2025/5/24', priority: 'EX', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
 
-    { idImg: 38, class: "Caster", name: 'Nero Claudius (Caster)', bannerDate: '2023-06-30', priority: 'C', gender:'Female', alignment:['Chaotic','Summer'], rarity: 5},
-    { idImg: 38, class: "Caster", name: 'Nero Claudius (Caster)', bannerDate: '2024-08-03', priority: 'B', gender:'Female', alignment:['Chaotic','Summer'], rarity: 5},
-    { idImg: 38, class: "Caster", name: 'Nero Claudius (Caster)', bannerDate: '2025-05-31', priority: 'A', gender:'Female', alignment:['Chaotic','Summer'], rarity: 5},
+    { idImg: 38, class: "Caster", name: 'Nero Claudius (Caster)', bannerDate: '2023/6/30', priority: 'C', gender:'Female', alignment:['Chaotic','Summer'], rarity: 5},
+    { idImg: 38, class: "Caster", name: 'Nero Claudius (Caster)', bannerDate: '2024/8/3', priority: 'B', gender:'Female', alignment:['Chaotic','Summer'], rarity: 5},
+    { idImg: 38, class: "Caster", name: 'Nero Claudius (Caster)', bannerDate: '2025/5/31', priority: 'A', gender:'Female', alignment:['Chaotic','Summer'], rarity: 5},
 
-    { idImg: 39, class: "Lancer", name: 'Sakamoto Ryouma (Lancer)', bannerDate: '2023-11-22', priority: 'C', gender:'Male', alignment:['Neutral','Balanced'], rarity: 5},
-    { idImg: 39, class: "Lancer", name: 'Sakamoto Ryouma (Lancer)', bannerDate: '2024-09-17', priority: 'B', gender:'Male', alignment:['Neutral','Balanced'], rarity: 5},
-    { idImg: 39, class: "Lancer", name: 'Sakamoto Ryouma (Lancer)', bannerDate: '2025-03-24', priority: 'A', gender:'Male', alignment:['Neutral','Balanced'], rarity: 5},
-
-    { idImg: 40, class: "Alter Ego", name: 'Super Bunyan', bannerDate: '2024-04-27', priority: 'EX', gender:'Female', alignment:['Neutral','Balanced'], rarity: 5},
-
-    { idImg: 41, class: "Berserk", name: 'Sen no Rikyu', bannerDate: '2024-09-14', priority: 'EX', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
-
-    { idImg: 42, class: "Lancer", name: 'Vritra', bannerDate: '2024-02-09', priority: 'D', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
-    { idImg: 42, class: "Lancer", name: 'Vritra', bannerDate: '2024-12-07', priority: 'C', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
-    { idImg: 42, class: "Lancer", name: 'Vritra', bannerDate: '2025-02-17', priority: 'B', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
-    { idImg: 42, class: "Lancer", name: 'Vritra', bannerDate: '2025-07-12', priority: 'A', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
-
-    { idImg: 43, class: "Foreigner", name: 'Jacques de Molay', bannerDate: '2023-10-20', priority: 'D', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
-    { idImg: 43, class: "Foreigner", name: 'Jacques de Molay', bannerDate: '2024-05-12', priority: 'C', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
-    { idImg: 43, class: "Foreigner", name: 'Jacques de Molay', bannerDate: '2024-10-15', priority: 'B', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
-    { idImg: 43, class: "Foreigner", name: 'Jacques de Molay', bannerDate: '2025-04-29', priority: 'A', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
-
-    { idImg: 44, class: "Ruler", name: 'Pope Johanna', bannerDate: '2025-02-17', priority: 'EX', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
-
-    { idImg: 45, class: "Foreigner", name: 'Abigail Williams', bannerDate: '2024-11-24', priority: 'EX', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
-
-    { idImg: 46, class: "Foreigner", name: 'Abigail Williams (Summer)', bannerDate: '2024-08-03', priority: 'EX', gender:'Female', alignment:['Lawful','Evil'], rarity: 5},
-
-    { idImg: 47, class: "Caster", name: 'Merlin', bannerDate: '2024-03-12', priority: 'B', gender:'Male', alignment:['Lawful','Good'], rarity: 5},
-    { idImg: 47, class: "Caster", name: 'Merlin', bannerDate: '2025-03-27', priority: 'A', gender:'Male', alignment:['Lawful','Good'], rarity: 5},
-
-    { idImg: 48, class: "Alter Ego", name: 'Ashiya Douman', bannerDate: '2023-09-22', priority: 'B', gender:'Male', alignment:['Chaotic','Evil'], rarity: 5},
-    { idImg: 48, class: "Alter Ego", name: 'Ashiya Douman', bannerDate: '2024-08-10', priority: 'A', gender:'Male', alignment:['Chaotic','Evil'], rarity: 5},
-
-    { idImg: 49, class: "Caster", name: 'Tamamo-no-Mae', bannerDate: '2024-02-09', priority: 'B', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
-    { idImg: 49, class: "Caster", name: 'Tamamo-no-Mae', bannerDate: '2025-02-17', priority: 'A', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
-
-    { idImg: 50, class: "Rider", name: 'Kyokutei Bakin', bannerDate: '2024-06-29', priority: 'B', gender:'Female', alignment:['Lawful','Balanced'], rarity: 5},
-    { idImg: 50, class: "Rider", name: 'Kyokutei Bakin', bannerDate: '2025-07-07', priority: 'A', gender:'Female', alignment:['Lawful','Balanced'], rarity: 5},
+    { idImg: 39, class: "Lancer", name: 'Sakamoto Ryouma (Lancer)', bannerDate: '2023/11/22', priority: 'C', gender:'Male', alignment:['Neutral','Balanced'], rarity: 5},
+    { idImg: 39, class: "Lancer", name: 'Sakamoto Ryouma (Lancer)', bannerDate: '2024/9/17', priority: 'B', gender:'Male', alignment:['Neutral','Balanced'], rarity: 5},
+    { idImg: 39, class: "Lancer", name: 'Sakamoto Ryouma (Lancer)', bannerDate: '2025/3/24', priority: 'A', gender:'Male', alignment:['Neutral','Balanced'], rarity: 5},
     
-    { idImg: 51, class: "Saber", name: 'Nero Claudius (Bride)', bannerDate: '2024-02-02', priority: 'D', gender:'Female', alignment:['Chaotic','Bride'], rarity: 5},
-    { idImg: 51, class: "Saber", name: 'Nero Claudius (Bride)', bannerDate: '2024-12-14', priority: 'C', gender:'Female', alignment:['Chaotic','Bride'], rarity: 5},
-    { idImg: 51, class: "Saber", name: 'Nero Claudius (Bride)', bannerDate: '2025-02-19', priority: 'B', gender:'Female', alignment:['Chaotic','Bride'], rarity: 5},
-    { idImg: 51, class: "Saber", name: 'Nero Claudius (Bride)', bannerDate: '2025-05-31', priority: 'A', gender:'Female', alignment:['Chaotic','Bride'], rarity: 5},
+    { idImg: 40, class: "Alter Ego", name: 'Super Bunyan', bannerDate: '2024/4/27', priority: 'B', gender:'Female', alignment:['Neutral','Balanced'], rarity: 5},
+    { idImg: 40, class: "Alter Ego", name: 'Super Bunyan', bannerDate: '2025/8/1', priority: 'A', gender:'Female', alignment:['Neutral','Balanced'], rarity: 5},
 
-    { idImg: 52, class: "Ruler", name: "Jeanne d'Arc", bannerDate: '2023-10-27', priority: 'D', gender:'Female', alignment:['Lawful', 'Good'], rarity: 5},
-    { idImg: 52, class: "Ruler", name: "Jeanne d'Arc", bannerDate: '2024-02-09', priority: 'C', gender:'Female', alignment:['Lawful', 'Good'], rarity: 5},
-    { idImg: 52, class: "Ruler", name: "Jeanne d'Arc", bannerDate: '2024-10-27', priority: 'B', gender:'Female', alignment:['Lawful', 'Good'], rarity: 5},
-    { idImg: 52, class: "Ruler", name: "Jeanne d'Arc", bannerDate: '2025-02-17', priority: 'A', gender:'Female', alignment:['Lawful', 'Good'], rarity: 5},
+    { idImg: 41, class: "Berserk", name: 'Sen no Rikyu', bannerDate: '2024/9/14', priority: 'EX', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
+
+    { idImg: 42, class: "Lancer", name: 'Vritra', bannerDate: '2024/2/9', priority: 'D', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
+    { idImg: 42, class: "Lancer", name: 'Vritra', bannerDate: '2024/12/7', priority: 'C', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
+    { idImg: 42, class: "Lancer", name: 'Vritra', bannerDate: '2025/2/17', priority: 'B', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
+    { idImg: 42, class: "Lancer", name: 'Vritra', bannerDate: '2025/7/12', priority: 'A', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
+
+    { idImg: 43, class: "Foreigner", name: 'Jacques de Molay', bannerDate: '2023/10/20', priority: 'D', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
+    { idImg: 43, class: "Foreigner", name: 'Jacques de Molay', bannerDate: '2024/5/12', priority: 'C', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
+    { idImg: 43, class: "Foreigner", name: 'Jacques de Molay', bannerDate: '2024/10/15', priority: 'B', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
+    { idImg: 43, class: "Foreigner", name: 'Jacques de Molay', bannerDate: '2025/4/29', priority: 'A', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
+
+    { idImg: 44, class: "Ruler", name: 'Pope Johanna', bannerDate: '2025/2/17', priority: 'EX', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
+
+    { idImg: 45, class: "Foreigner", name: 'Abigail Williams', bannerDate: '2024/11/24', priority: 'EX', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
+
+    { idImg: 46, class: "Foreigner", name: 'Abigail Williams (Summer)', bannerDate: '2024/8/3', priority: 'EX', gender:'Female', alignment:['Lawful','Evil'], rarity: 5},
+
+    { idImg: 47, class: "Caster", name: 'Merlin', bannerDate: '2024/3/12', priority: 'B', gender:'Male', alignment:['Lawful','Good'], rarity: 5},
+    { idImg: 47, class: "Caster", name: 'Merlin', bannerDate: '2025/3/27', priority: 'A', gender:'Male', alignment:['Lawful','Good'], rarity: 5},
+
+    { idImg: 48, class: "Alter Ego", name: 'Ashiya Douman', bannerDate: '2023/922', priority: 'B', gender:'Male', alignment:['Chaotic','Evil'], rarity: 5},
+    { idImg: 48, class: "Alter Ego", name: 'Ashiya Douman', bannerDate: '2024/8/10', priority: 'A', gender:'Male', alignment:['Chaotic','Evil'], rarity: 5},
+
+    { idImg: 49, class: "Caster", name: 'Tamamo-no-Mae', bannerDate: '2024/2/9', priority: 'B', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
+    { idImg: 49, class: "Caster", name: 'Tamamo-no-Mae', bannerDate: '2025/2/17', priority: 'A', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
+
+    { idImg: 50, class: "Rider", name: 'Kyokutei Bakin', bannerDate: '2024/6/29', priority: 'B', gender:'Female', alignment:['Lawful','Balanced'], rarity: 5},
+    { idImg: 50, class: "Rider", name: 'Kyokutei Bakin', bannerDate: '2025/7/7', priority: 'A', gender:'Female', alignment:['Lawful','Balanced'], rarity: 5},
     
-    { idImg: 53, class: "Avenger", name: "Jeanne d'Arc (Alter)", bannerDate: '2024-05-12', priority: 'C', gender:'Female', alignment:['Chaotic', 'Evil'], rarity: 5},
-    { idImg: 53, class: "Avenger", name: "Jeanne d'Arc (Alter)", bannerDate: '2024-10-27', priority: 'B', gender:'Female', alignment:['Chaotic', 'Evil'], rarity: 5},
-    { idImg: 53, class: "Avenger", name: "Jeanne d'Arc (Alter)", bannerDate: '2025-07-03', priority: 'A', gender:'Female', alignment:['Chaotic', 'Evil'], rarity: 5},
+    { idImg: 51, class: "Saber", name: 'Nero Claudius (Bride)', bannerDate: '2024/2/2', priority: 'D', gender:'Female', alignment:['Chaotic','Bride'], rarity: 5},
+    { idImg: 51, class: "Saber", name: 'Nero Claudius (Bride)', bannerDate: '2024/12/14', priority: 'C', gender:'Female', alignment:['Chaotic','Bride'], rarity: 5},
+    { idImg: 51, class: "Saber", name: 'Nero Claudius (Bride)', bannerDate: '2025/2/19', priority: 'B', gender:'Female', alignment:['Chaotic','Bride'], rarity: 5},
+    { idImg: 51, class: "Saber", name: 'Nero Claudius (Bride)', bannerDate: '2025/5/31', priority: 'A', gender:'Female', alignment:['Chaotic','Bride'], rarity: 5},
 
-    { idImg: 54, class: "Foreigner", name: 'Yang Guifei', bannerDate: '2024-05-12', priority: 'EX', gender:'Female', alignment:['Chaotic','Good'], rarity: 5},
+    { idImg: 52, class: "Ruler", name: "Jeanne d'Arc", bannerDate: '2023/10/27', priority: 'D', gender:'Female', alignment:['Lawful', 'Good'], rarity: 5},
+    { idImg: 52, class: "Ruler", name: "Jeanne d'Arc", bannerDate: '2024/2/9', priority: 'C', gender:'Female', alignment:['Lawful', 'Good'], rarity: 5},
+    { idImg: 52, class: "Ruler", name: "Jeanne d'Arc", bannerDate: '2024/10/27', priority: 'B', gender:'Female', alignment:['Lawful', 'Good'], rarity: 5},
+    { idImg: 52, class: "Ruler", name: "Jeanne d'Arc", bannerDate: '2025/2/17', priority: 'A', gender:'Female', alignment:['Lawful', 'Good'], rarity: 5},
+    
+    { idImg: 53, class: "Avenger", name: "Jeanne d'Arc (Alter)", bannerDate: '2024/5/12', priority: 'C', gender:'Female', alignment:['Chaotic', 'Evil'], rarity: 5},
+    { idImg: 53, class: "Avenger", name: "Jeanne d'Arc (Alter)", bannerDate: '2024/10/27', priority: 'B', gender:'Female', alignment:['Chaotic', 'Evil'], rarity: 5},
+    { idImg: 53, class: "Avenger", name: "Jeanne d'Arc (Alter)", bannerDate: '2025/7/3', priority: 'A', gender:'Female', alignment:['Chaotic', 'Evil'], rarity: 5},
 
-    { idImg: 55, class: "Foreigner", name: "Katsushika Hokusai", bannerDate: '2023-12-02', priority: 'C', gender:'Female', alignment:['Chaotic', 'Balanced'], rarity: 5},
-    { idImg: 55, class: "Foreigner", name: "Katsushika Hokusai", bannerDate: '2024-07-06', priority: 'B', gender:'Female', alignment:['Chaotic', 'Balanced'], rarity: 5},
-    { idImg: 55, class: "Foreigner", name: "Katsushika Hokusai", bannerDate: '2025-07-03', priority: 'A', gender:'Female', alignment:['Chaotic', 'Balanced'], rarity: 5},    
+    { idImg: 54, class: "Foreigner", name: 'Yang Guifei', bannerDate: '2024/5/12', priority: 'EX', gender:'Female', alignment:['Chaotic','Good'], rarity: 5},
+
+    { idImg: 55, class: "Foreigner", name: "Katsushika Hokusai", bannerDate: '2023/12/02', priority: 'C', gender:'Female', alignment:['Chaotic', 'Balanced'], rarity: 5},
+    { idImg: 55, class: "Foreigner", name: "Katsushika Hokusai", bannerDate: '2024/7/6', priority: 'B', gender:'Female', alignment:['Chaotic', 'Balanced'], rarity: 5},
+    { idImg: 55, class: "Foreigner", name: "Katsushika Hokusai", bannerDate: '2025/7/3', priority: 'A', gender:'Female', alignment:['Chaotic', 'Balanced'], rarity: 5},    
 ]
