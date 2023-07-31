@@ -140,7 +140,7 @@ const servants = [
     { idImg: 47, class: "Caster", name: 'Merlin', bannerDate: '2024/3/12', priority: 'B', gender:'Male', alignment:['Lawful','Good'], rarity: 5},
     { idImg: 47, class: "Caster", name: 'Merlin', bannerDate: '2025/3/27', priority: 'A', gender:'Male', alignment:['Lawful','Good'], rarity: 5},
 
-    { idImg: 48, class: "Alter Ego", name: 'Ashiya Douman', bannerDate: '2023/922', priority: 'B', gender:'Male', alignment:['Chaotic','Evil'], rarity: 5},
+    { idImg: 48, class: "Alter Ego", name: 'Ashiya Douman', bannerDate: '2023/9/22', priority: 'B', gender:'Male', alignment:['Chaotic','Evil'], rarity: 5},
     { idImg: 48, class: "Alter Ego", name: 'Ashiya Douman', bannerDate: '2024/8/10', priority: 'A', gender:'Male', alignment:['Chaotic','Evil'], rarity: 5},
 
     { idImg: 49, class: "Caster", name: 'Tamamo-no-Mae', bannerDate: '2024/2/9', priority: 'B', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
