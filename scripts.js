@@ -5,46 +5,6 @@ servants.sort((a, b) => {
     }
 })
 
-const filterByAlignment = () => {
-    let alignmentOptions1 = []
-    let alignmentOptions2 = []
-
-    document.getElementById('Lawful').checked ? alignmentOptions1.push('Lawful') : ''
-    document.getElementById('Neutral').checked ? alignmentOptions1.push('Neutral') : ''
-    document.getElementById('Chaotic').checked ? alignmentOptions1.push('Chaotic') : ''
-
-    if (alignmentOptions1.length == 0) {
-        alignmentOptions1 = ['Lawful', 'Neutral', 'Chaotic']
-    }
-
-    document.getElementById('Good').checked ? alignmentOptions2.push('Good') : ''
-    document.getElementById('Balanced').checked ? alignmentOptions2.push('Balanced') : ''
-    document.getElementById('Evil').checked ? alignmentOptions2.push('Evil') : ''
-    document.getElementById('Summer').checked ? alignmentOptions2.push('Summer') : ''
-    document.getElementById('Madness').checked ? alignmentOptions2.push('Madness') : ''
-    document.getElementById('Bride').checked ? alignmentOptions2.push('Bride') : ''
-
-    if (alignmentOptions2.length == 0) {
-        alignmentOptions2 = ['Good', 'Balanced', 'Evil', 'Summer', 'Madness', 'Bride']
-    }
-
-    let filteredServants = servants.filter(a => {
-        if (a.alignment.filter(b => alignmentOptions1.includes(b)).length > 0) {
-            return 1
-        }
-    })
-
-    filteredServants = filteredServants.filter(a => {
-        if (a.alignment.filter(b => alignmentOptions2.includes(b)).length > 0) {
-            return 1
-        }
-    })
-
-
-    // console.log(filteredServants.filter(a => ['EX','A'].includes(a.priority)))
-
-}
-
 // funcion para ordenar por nombre todos los servants
 // servants.sort((a, b) => a.bannerDate.localeCompare(b.bannerDate)).forEach(x => {
 
@@ -115,6 +75,7 @@ const filterServant = () => {
     let servantClass = document.getElementById('filterByClass').value
     let servantName = document.getElementById('filterByName').value
     let servantGender = document.getElementById("filterByGender").value
+    let servantRarity = document.getElementById('filterByRarity').value
 
     // obtiene las prioridades
     let priorityOptions = []
@@ -156,7 +117,7 @@ const filterServant = () => {
     })
 
     // Filtra los servants por genero, clase y nombre
-    let filteredServants = servants.filter((a) => a.name.toLowerCase().includes(servantName.toLowerCase()) && a.class.includes(servantClass) && a.gender.includes(servantGender))
+    let filteredServants = servants.filter((a) => a.name.toLowerCase().includes(servantName.toLowerCase()) && a.class.includes(servantClass) && a.gender.includes(servantGender) && (a.rarity == servantRarity || servantRarity == ''))
 
     // Filtra por alineamiento (primario) 
     filteredServants = filteredServants.filter(a => {

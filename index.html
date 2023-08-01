@@ -25,8 +25,8 @@
 
 <body style="background-color: #06070c; color: white;">
 
-    <div class="container">
-        <h1 class="text-primary text-center">Lista de servants 31/07/2023</h1>
+    <div class="container-md">
+        <h1 class="text-primary text-center">Lista de servants 1/08/2023</h1>
 
         <div class="row mt-2">
             <!-- filtrar por prioridad -->
@@ -99,14 +99,14 @@
             <div class="col-12 col-sm-5 col-md-6 col-lg-8 mt-2 mt-sm-0">
                 <div class="row">
                     <!-- Filtrar por nombre -->
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 mt-2 mt-sm-0">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mt-2 mt-sm-0">
                         <label for="filterByName">Buscar por nombre:</label>
                         <input id="filterByName" onchange="filterServant()" class="form-control bg-dark text-info"
                             type="text">
                     </div>
 
                     <!-- Filtrar por clase -->
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-2 mt-sm-0">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mt-2 mt-sm-0">
                         <label for="filterByClass">Filtrar por clase:</label>
                         <select class="form-control bg-dark text-info" onchange="filterServant()" name="filterByClass"
                             id="filterByClass">
@@ -129,7 +129,7 @@
                     </div>
 
                     <!-- Filtrar por genero -->
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-2 mt-md-0">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mt-2 mt-md-0">
                         <label for="filterByGender">Filtrar por genero:</label>
                         <select class="form-control bg-dark text-info" onchange="filterServant()" name="filterByGender"
                             id="filterByGender">
@@ -139,9 +139,10 @@
                         </select>
                     </div>
 
-                    <!-- <div class="col-12 col-sm-12 col-md-6 col-lg-4 mt-2 mt-md-0">
-                        <label for="filterByRarity">Filtrar por genero:</label>
-                        <select name="filterByRarity" id="filterByRarity" class="form-control bg-dark text-info">
+                    <!-- Filtrar por rareza/estrella -->
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mt-2 mt-md-0">
+                        <label for="filterByRarity">Filtrar por Rareza:</label>
+                        <select name="filterByRarity" id="filterByRarity" onchange="filterServant()" class="form-control bg-dark text-info">
                             <option value="">Todos</option>
                             <option value="5">5 Estrellas</option>
                             <option value="4">4 Estrellas</option>
@@ -150,7 +151,7 @@
                             <option value="1">1 Estrella</option>
                             <option value="0">0 Estrella</option>
                         </select>
-                    </div> -->
+                    </div>
                 </div>
             </div>
 
