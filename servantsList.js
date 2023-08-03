@@ -168,4 +168,6 @@ const servants = [
     { idImg: 55, class: "Foreigner", name: "Katsushika Hokusai", bannerDate: '2023/12/02', priority: 'C', gender:'Female', alignment:['Chaotic', 'Balanced'], rarity: 5},
     { idImg: 55, class: "Foreigner", name: "Katsushika Hokusai", bannerDate: '2024/7/6', priority: 'B', gender:'Female', alignment:['Chaotic', 'Balanced'], rarity: 5},
     { idImg: 55, class: "Foreigner", name: "Katsushika Hokusai", bannerDate: '2025/7/3', priority: 'A', gender:'Female', alignment:['Chaotic', 'Balanced'], rarity: 5},    
+    
+    { idImg: 56, class: "Ruler", name: "Qin Shi Huang", bannerDate: '2024/6/22', priority: 'EX', gender:'Unknown', alignment:['Lawful', 'Good'], rarity: 5},
 ]
