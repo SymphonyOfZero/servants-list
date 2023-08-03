@@ -42,8 +42,8 @@ const servants = [
     { idImg: 16, class: "Alter Ego", name: 'Okita Souji (Alter)', bannerDate: '2023/9/29', priority: 'B', gender:'Female', alignment:['Neutral','Balanced'], rarity: 5},
     { idImg: 16, class: "Alter Ego", name: 'Okita Souji (Alter)', bannerDate: '2024/9/17', priority: 'A', gender:'Female', alignment:['Neutral','Balanced'], rarity: 5},
 
-    { idImg: 17, class: "Saber", name: 'Okita Souji (Saber Alter)', bannerDate: '2023/9/8', priority: 'B', gender:'Female', alignment:['Neutral','Balanced'], rarity: 5},
-    { idImg: 17, class: "Saber", name: 'Okita Souji (Saber Alter)', bannerDate: '2024/8/21', priority: 'A', gender:'Female', alignment:['Neutral','Balanced'], rarity: 5},
+    { idImg: 17, class: "Saber", name: 'Okita Souji (Saber Alter)', bannerDate: '2023/9/8', priority: 'B', gender:'Unknown', alignment:['Neutral','Balanced'], rarity: 5},
+    { idImg: 17, class: "Saber", name: 'Okita Souji (Saber Alter)', bannerDate: '2024/8/21', priority: 'A', gender:'Unknown', alignment:['Neutral','Balanced'], rarity: 5},
 
     { idImg: 18, class: "Assasin", name: 'Kama', bannerDate: '2024/7/13', priority: 'B', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
     { idImg: 18, class: "Assasin", name: 'Kama', bannerDate: '2025/6/21', priority: 'A', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
@@ -51,9 +51,9 @@ const servants = [
     { idImg: 19, class: "Avenger", name: 'Space Ishtar', bannerDate: '2024/8/31', priority: 'B', gender:'Female', alignment:['Lawful','Evil'], rarity: 5},
     { idImg: 19, class: "Avenger", name: 'Space Ishtar', bannerDate: '2025/08/01', priority: 'A', gender:'Female', alignment:['Lawful','Evil'], rarity: 5},
 
-    { idImg: 20, class: "Avenger", name: 'Demon King Nobunaga (Oda Nobunaga)', bannerDate: '2023/11/22', priority: 'C', gender:'Female', alignment:['Chaotic','Balanced'], rarity: 5},
-    { idImg: 20, class: "Avenger", name: 'Demon King Nobunaga (Oda Nobunaga)', bannerDate: '2024/9/17', priority: 'B', gender:'Female', alignment:['Chaotic','Balanced'], rarity: 5},
-    { idImg: 20, class: "Avenger", name: 'Demon King Nobunaga (Oda Nobunaga)', bannerDate: '2025/3/22', priority: 'A', gender:'Female', alignment:['Chaotic','Balanced'], rarity: 5},
+    { idImg: 20, class: "Avenger", name: 'Demon King Nobunaga (Oda Nobunaga)', bannerDate: '2023/11/22', priority: 'C', gender:'Unknown', alignment:['Chaotic','Balanced'], rarity: 5},
+    { idImg: 20, class: "Avenger", name: 'Demon King Nobunaga (Oda Nobunaga)', bannerDate: '2024/9/17', priority: 'B', gender:'Unknown', alignment:['Chaotic','Balanced'], rarity: 5},
+    { idImg: 20, class: "Avenger", name: 'Demon King Nobunaga (Oda Nobunaga)', bannerDate: '2025/3/22', priority: 'A', gender:'Unknown', alignment:['Chaotic','Balanced'], rarity: 5},
 
     { idImg: 21, class: "Avenger", name: 'Nitocris (Alter)', bannerDate: '2025/1/18', priority: 'C', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
     { idImg: 21, class: "Avenger", name: 'Nitocris (Alter)', bannerDate: '2025/2/17', priority: 'B', gender:'Female', alignment:['Chaotic','Evil'], rarity: 5},
@@ -106,7 +106,7 @@ const servants = [
     { idImg: 36, class: "Foreigner", name: 'Kukulkan', bannerDate: '2025/2/7', priority: 'B', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
     { idImg: 36, class: "Foreigner", name: 'Kukulkan', bannerDate: '2025/6/7', priority: 'A', gender:'Female', alignment:['Lawful','Good'], rarity: 5},
 
-    { idImg: 37, class: "Assasin", name: 'Kashin Koji', bannerDate: '2025/5/24', priority: 'EX', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
+    { idImg: 37, class: "Assasin", name: 'Kashin Koji', bannerDate: '2025/5/24', priority: 'EX', gender:'Unknown', alignment:['Neutral','Evil'], rarity: 5},
 
     { idImg: 38, class: "Caster", name: 'Nero Claudius (Caster)', bannerDate: '2023/6/30', priority: 'C', gender:'Female', alignment:['Chaotic','Summer'], rarity: 5},
     { idImg: 38, class: "Caster", name: 'Nero Claudius (Caster)', bannerDate: '2024/8/3', priority: 'B', gender:'Female', alignment:['Chaotic','Summer'], rarity: 5},
@@ -140,8 +140,8 @@ const servants = [
     { idImg: 47, class: "Caster", name: 'Merlin', bannerDate: '2024/3/12', priority: 'B', gender:'Male', alignment:['Lawful','Good'], rarity: 5},
     { idImg: 47, class: "Caster", name: 'Merlin', bannerDate: '2025/3/27', priority: 'A', gender:'Male', alignment:['Lawful','Good'], rarity: 5},
 
-    { idImg: 48, class: "Alter Ego", name: 'Ashiya Douman', bannerDate: '2023/9/22', priority: 'B', gender:'Male', alignment:['Chaotic','Evil'], rarity: 5},
-    { idImg: 48, class: "Alter Ego", name: 'Ashiya Douman', bannerDate: '2024/8/10', priority: 'A', gender:'Male', alignment:['Chaotic','Evil'], rarity: 5},
+    { idImg: 48, class: "Alter Ego", name: 'Ashiya Douman', bannerDate: '2023/9/22', priority: 'B', gender:'Unknown', alignment:['Chaotic','Evil'], rarity: 5},
+    { idImg: 48, class: "Alter Ego", name: 'Ashiya Douman', bannerDate: '2024/8/10', priority: 'A', gender:'Unknown', alignment:['Chaotic','Evil'], rarity: 5},
 
     { idImg: 49, class: "Caster", name: 'Tamamo-no-Mae', bannerDate: '2024/2/9', priority: 'B', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
     { idImg: 49, class: "Caster", name: 'Tamamo-no-Mae', bannerDate: '2025/2/17', priority: 'A', gender:'Female', alignment:['Neutral','Evil'], rarity: 5},
