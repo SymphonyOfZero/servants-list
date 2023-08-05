@@ -170,4 +170,11 @@ const servants = [
     { idImg: 55, class: "Foreigner", name: "Katsushika Hokusai", bannerDate: '2025/7/3', priority: 'A', gender:'Female', alignment:['Chaotic', 'Balanced'], rarity: 5},    
     
     { idImg: 56, class: "Ruler", name: "Qin Shi Huang", bannerDate: '2024/6/22', priority: 'EX', gender:'Unknown', alignment:['Lawful', 'Good'], rarity: 5},
+
+    { idImg: 57, class: "Rider", name: "Dobrynya Nikitich", bannerDate: '2023/12/22', priority: 'C', gender:'Female', alignment:['Neutral', 'Good'], rarity: 4},
+    { idImg: 57, class: "Rider", name: "Dobrynya Nikitich", bannerDate: '2024/5/25', priority: 'B', gender:'Female', alignment:['Neutral', 'Good'], rarity: 4},
+    { idImg: 57, class: "Rider", name: "Dobrynya Nikitich", bannerDate: '2025/5/17', priority: 'A', gender:'Female', alignment:['Neutral', 'Good'], rarity: 4},    
+
+    { idImg: 58, class: "Archer", name: "Zenobia", bannerDate: '2023/10/20', priority: 'EX', gender:'Female', alignment:['Lawful', 'Good'], rarity: 4},
+
 ]
