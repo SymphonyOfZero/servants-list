@@ -177,4 +177,6 @@ const servants = [
 
     { idImg: 58, class: "Archer", name: "Zenobia", bannerDate: '2023/10/20', priority: 'EX', gender:'Female', alignment:['Lawful', 'Good'], rarity: 4},
 
+    { idImg: 59, class: "CAster", name: "Savior Aesc", bannerDate: '2025/7/30', priority: 'EX', gender:'Female', alignment:['Lawful', 'Good', 'Balanced', 'Summer'], rarity: 5},
+    
 ]
