@@ -12,12 +12,15 @@ servants.sort((a, b) => {
 const printServants = () => {
     let box = document.getElementById('box')
     box.innerHTML = ""
-    let totalServant = servants.filter(a => ['EX', 'A'].includes(a.priority)).length
+    let totalServant = servants.filter(a => ['EX', 'A'].includes(a.priority) && new Date() <= new Date(a.bannerDate)).length
+
     document.getElementById('resultServant').innerHTML = totalServant
     document.getElementById('totalServant').innerHTML = totalServant
     let priorityColor = 'secondary'
 
-    servants.forEach(x => {
+    servants.filter(
+        a => new Date() <= new Date(a.bannerDate)
+    ).forEach(x => {
         // Determina el color y el simbolo de la prioridad
         if (x.priority == 'EX') {
             priorityColor = 'indigo'
