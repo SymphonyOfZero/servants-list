@@ -204,4 +204,7 @@ const servants = [
 
     { idImg: 66, class: "Saber", name: "Medusa (Saber)", bannerDate: '2025/7/5', priority: 'EX', gender:'Female', alignment:['Chaotic','Balanced'], rarity: 5},
 
+    { idImg: 67, class: "Caster", name: "Miss Crane", bannerDate: '2024/5/12', priority: 'B', gender:'Female', alignment:['Neutral','Good'], rarity: 5},
+    { idImg: 67, class: "Caster", name: "Miss Crane", bannerDate: '2025/7/12', priority: 'A', gender:'Female', alignment:['Neutral','Good'], rarity: 5},
+
 ]
